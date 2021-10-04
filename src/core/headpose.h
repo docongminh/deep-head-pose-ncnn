@@ -12,7 +12,7 @@ namespace core {
 		HeadPose();
 		~HeadPose();
 		int LoadModel(const char* root_path);
-		void Predict(const cv::Mat& image, std::vector<FaceInfo>& faces,
+		int Predict(const cv::Mat& image, std::vector<FaceInfo>& faces,
                         std::vector<PoseValue>* poses, std::vector<ScaleInfo>* scales_info);
 
 	private:

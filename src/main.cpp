@@ -1,12 +1,8 @@
 #include <iostream>
-#include "retinaface.h"
-#include "command.h"
-#include "headpose.h"
+#include "engine.h"
 #include <opencv2/opencv.hpp>
 
-
 using namespace core;
-
 int main(){
     const char* root_path = "../models";
     std::vector<FaceInfo> faces;
@@ -15,15 +11,13 @@ int main(){
     std::vector<ScaleInfo> scalesinfo;
     cv::Mat image = cv::imread("../images/cr7.jpg");
     //
-    RetinaFace* detector = new RetinaFace();
-    HeadPose* headpose = new HeadPose();
-    detector->LoadModel(root_path);
-    headpose->LoadModel(root_path);
+    inference::HeadPoseEngine* engine = new inference::HeadPoseEngine();
+    engine->LoadModel(root_path);
     
-    detector->DetectFace(image, &faces);
+    engine->DetectFace(image, &faces);
     // for (int i=0; i<20; i++){
     double start = static_cast<double>(cv::getTickCount());
-    headpose->Predict(image, faces, &posevalues, &scalesinfo);
+    engine->Predict(image, faces, &posevalues, &scalesinfo);
     double end = static_cast<double>(cv::getTickCount());
     double time = (end-start)/cv::getTickFrequency() * 1000;
     std::cout << "Time estimate: " << time << std::endl;

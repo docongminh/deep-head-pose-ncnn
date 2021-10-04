@@ -95,7 +95,7 @@ namespace core {
 			pose_value.roll = roll_value*3-99;
 	}
     // predict yaw, pitch, roll from image
-    void HeadPose::Predict(const cv::Mat& image, std::vector<FaceInfo>& faces,
+    int HeadPose::Predict(const cv::Mat& image, std::vector<FaceInfo>& faces,
                         std::vector<PoseValue>* poses, std::vector<ScaleInfo>* scales_info)
     {
         //
@@ -155,6 +155,8 @@ namespace core {
             scales_info->push_back(scale_info);
             poses->push_back(pose_value);
         }
+
+        return 0;
     }
 
     /*
