@@ -12,6 +12,8 @@ namespace core {
 		HeadPose();
 		~HeadPose();
 		int LoadModel(const char* root_path);
+		// tried use void Predict but appear error : https://stackoverflow.com/questions/8896281/why-am-i-getting-void-value-not-ignored-as-it-ought-to-be/17915388
+		// in engine wapper. when in inference::HeadPoseEngine::Predict is funtion type int
 		int Predict(const cv::Mat& image, std::vector<FaceInfo>& faces,
                         std::vector<PoseValue>* poses, std::vector<ScaleInfo>* scales_info);
 
