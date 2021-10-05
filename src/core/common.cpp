@@ -166,10 +166,10 @@ namespace core {
 		cv::Point red(static_cast<int>(x1), static_cast<int>(y1));
 		cv::Point green(static_cast<int>(x2), static_cast<int>(y2));
 		cv::Point blue(static_cast<int>(x3), static_cast<int>(y3));
-		//
-		cv::line(img, origin_point, red, cv::Scalar(0, 0, 255), 3);
-		cv::line(img, origin_point, green, cv::Scalar(0, 255, 0), 3);
-		cv::line(img, origin_point, blue, cv::Scalar(255, 0, 0), 2); 
+		// opencv c++ : RGB - python: BGR
+		cv::line(img, origin_point, red, CV_RGB(0, 0, 255), 3);
+		cv::line(img, origin_point, green, CV_RGB(0, 255, 0), 3);
+		cv::line(img, origin_point, blue, CV_RGB(255, 0, 0), 2); 
 	}
 	//
 

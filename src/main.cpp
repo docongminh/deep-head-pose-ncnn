@@ -30,6 +30,9 @@ int main(int argc, char** argv)
     cv::putText(image, "pitch: "+std::to_string(v_pitch).substr(0, std::to_string(v_pitch).find(".")+3), cv::Point(50, 80), cv::FONT_HERSHEY_DUPLEX, 1.0, CV_RGB(0, 255, 0), 2);
     cv::putText(image, "roll: "+std::to_string(v_roll).substr(0, std::to_string(v_roll).find(".")+3), cv::Point(50, 110), cv::FONT_HERSHEY_DUPLEX, 1.0, CV_RGB(255, 0, 0), 2);
     //
+    std::cout << "yaw: " << v_yaw << std::endl;
+    std::cout << "pitch: " << v_pitch << std::endl;
+    std::cout << "roll: " << v_roll << std::endl;
     // cv::imwrite("../images/pose.jpg", image);
     std::cout << faces[0].location_ << std::endl;
     cv::Mat output;
