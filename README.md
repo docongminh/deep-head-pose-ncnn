@@ -7,7 +7,7 @@ Simple implement inference deep head pose ncnn version with high performance and
   - And if you use my docker environment, i was build ncnn library inside docker environment with path: `/home/ncnn_original/build` it's contain ncnn shared static library and tools for convert and quantize ncnn models.
 ## Convert models ncnn format.
   - As original deep head pose project used Pytorch framwork. So, We need convert Pytorch model to ncnn model.
-  - In ncnn wiki had detailed this guide [here](https://github.com/Tencent/ncnn/wiki/use-ncnn-with-pytorch-or-onnx). After convert pytorch to onnx format, you have to use ncnn build [tools](https://github.com/Tencent/ncnn/tree/master/tools/onnx) to convert onnx->ncnn. Inside my docker env, already to use in `/home/ncnn_original/build/tools/onnx`
+  - In ncnn wiki had detailed this guide [here](https://github.com/Tencent/ncnn/wiki/use-ncnn-with-pytorch-or-onnx). After convert pytorch to onnx format, you have to use ncnn build [tools](https://github.com/Tencent/ncnn/tree/master/tools/onnx) to convert onnx->ncnn. Inside my docker env, ready to use in `/home/ncnn_original/build/tools/onnx`
   - Notice, [Netron](https://netron.app/) support to visualize network in intuitive easy to get `input node` and `output node` as [specification of ncnn](https://github.com/Tencent/ncnn/wiki/param-and-model-file-structure)
 ## Build run test
 ### Run environment
