@@ -28,7 +28,10 @@ Simple implement inference deep head pose ncnn version with high performance and
       
      ![m10](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/m10_headpose.jpg)
      
-## Notice
+## Note during develop project
+  - [create extractor instant](https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#create-new-extractor-for-each-image)
+  - [normalize image](https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#pre-process)
+  - [resize image](https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#pre-process)
   - This project in progress. So, it have many issues and coding performance during develop process.
 ## References
   - [deep-head-pose](https://github.com/natanielruiz/deep-head-pose)
