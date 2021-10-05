@@ -32,7 +32,7 @@ Simple implement inference deep head pose ncnn version with high performance and
   - [create extractor instant](https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#create-new-extractor-for-each-image)
   - [normalize image](https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#pre-process)
   - [resize image](https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#pre-process)
-  - This project in progress. So, it has many issues and coding performance during develop process.
+  - This project in progress. So, it has many coding performance issues during develop process.
 ## References
   - [deep-head-pose](https://github.com/natanielruiz/deep-head-pose)
   - [retinaface](https://github.com/deepinsight/insightface/tree/master/detection/retinaface)
