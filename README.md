@@ -20,9 +20,14 @@ Simple implement inference deep head pose ncnn version with high performance and
   - In project root inside docker: `mkdir -p build && cd build
   - Cmake and build: `cmake ..` && `make`
   - Run test: `./main`
-  - Example
-    - [example 1](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/cr7_output.jpg)
-    - [example 2](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/m10_output.jpg)
+ 
+  - Examples:
+   
+     ![cr7](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/cr7_output.jpg)
+     
+      
+     ![m10](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/m10_output.jpg)
+     
 ## Notice
   - This project in progress. So, it have many issues and coding performance during develop process.
 ## References
