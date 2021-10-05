@@ -56,8 +56,8 @@ namespace core {
         tl_y = std::max(y_min_new, threshold);
         float x_max_t = std::min(static_cast<float>(img_width), x_max_new);
         float y_max_t = std::min(static_cast<float>(img_height), y_max_new);
-        br_x = x_max - tl_x; // subtract margin coords to x, y
-        br_y = y_max - tl_y;
+        br_x = x_max_t - tl_x; // subtract margin coords to x, y
+        br_y = y_max_t - tl_y;
         // Get bbox values
         scaleinfo.box_heigh = bbox_height;
         scaleinfo.box_width = bbox_width;
@@ -125,7 +125,7 @@ namespace core {
             
             cv::Mat input_img;
             HeadPose::PreProcess(img_cpy, faceinfo, input_img, scale_info);
-            cv::imwrite("../images/crop.jpg", input_img);
+            cv::imwrite("../images/input_head_image.jpg", input_img);
             // prepare ncnn extractor
             ncnn::Extractor ex = hopenet->create_extractor();
             ncnn::Mat in = ncnn::Mat::from_pixels_resize(input_img.data,
