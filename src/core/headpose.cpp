@@ -15,8 +15,10 @@ namespace core {
 	}
     // load ncnn model into net
 	int HeadPose::LoadModel(const char * root_path) {
-		std::string fd_param = std::string(root_path) + "/headpose/robust_alpha.param";
-		std::string fd_bin = std::string(root_path) + "/headpose/robust_alpha.bin";
+		std::string fd_param = std::string(root_path) + "/headpose/model_optimized/robust_alpha_opt.param";
+		std::string fd_bin = std::string(root_path) + "/headpose/model_optimized/robust_alpha_opt.bin";
+        // std::string fd_param = std::string(root_path) + "/headpose/model_base/robust_alpha.param";
+		// std::string fd_bin = std::string(root_path) + "/headpose/model_base/robust_alpha.bin";
 		if (hopenet->load_param(fd_param.c_str()) == -1 ||
 			hopenet->load_model(fd_bin.c_str()) == -1) {
 			std::cout << "load deep head pose model failed." << std::endl;
@@ -69,7 +71,7 @@ namespace core {
         cv::Rect roi = cv::Rect(tl_x, tl_y, br_x, br_y);
         //
         // input_img = img_cpy(cv::Range(roi.y, roi.height), cv::Range(roi.x, roi.width));
-        input_img = img_cpy(roi);
+        input_img = img_cpy(roi).clone();
     }
     // Post processing network output
     void HeadPose::PostProcess(std::vector<float> yaw, std::vector<float> pitch,
@@ -115,6 +117,7 @@ namespace core {
 		if (image.empty()) {
 			assert("input image empty.");
 		}
+        
         // execute
         for(int i=0; i<faces.size(); i++){
             //
@@ -128,8 +131,15 @@ namespace core {
             cv::imwrite("../images/input_head_image.jpg", input_img);
             // prepare ncnn extractor
             ncnn::Extractor ex = hopenet->create_extractor();
+            //
+            // ex.set_light_mode(true);
+            // ex.set_num_threads(4);
+            //
+            // ncnn::Mat in = ncnn::Mat::from_pixels(input_img.data, ncnn::Mat::PIXEL_RGB, input_img.cols, input_img.rows);
             ncnn::Mat in = ncnn::Mat::from_pixels_resize(input_img.data,
                 ncnn::Mat::PIXEL_BGR2RGB, input_img.cols, input_img.rows, inputSize_.width, inputSize_.height);
+            // https://github.com/Tencent/ncnn/wiki/FAQ-ncnn-produce-wrong-result#pre-process
+            in.substract_mean_normalize(mean, norm);
             ex.input("input.1", in);
             //
             std::string yaw_layer_name = "511";

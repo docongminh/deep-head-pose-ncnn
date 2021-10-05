@@ -21,8 +21,8 @@ namespace core {
 		ncnn::Net* hopenet;
         bool initialized_;
         const cv::Size inputSize_ = { 224, 224 };
-		// const float mean = {0.485, 0.456, 0.406}; // image = (image - mean) / std
-    	// const float std = {0.229, 0.224, 0.225}; // convert back before transform: ((image * std) + mean)
+		const float mean[3] = {0.485f*255.f, 0.456f*255.f, 0.406f*255.f}; // image = (image - mean) / std
+    	const float norm[3] = {1/0.229f/255.f, 1/0.224f/255.f, 1/0.225f/255.f}; // convert back before transform: ((image * std) + mean)
 		void PreProcess(cv::Mat& image, FaceInfo& faceinfo,
                         cv::Mat& input_img, ScaleInfo& scaleinfo);
 		void PostProcess(std::vector<float> yaw, std::vector<float> pitch,

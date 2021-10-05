@@ -172,7 +172,6 @@ namespace core {
 		cv::line(img, origin_point, blue, cv::Scalar(255, 0, 0), 2); 
 	}
 	//
-	
 
 	/*
 		End of namespace
