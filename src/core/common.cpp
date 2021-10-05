@@ -111,11 +111,11 @@ namespace core {
 		for(int i = 0; i<face_info.size(); i++)
 		{
 			cv::rectangle(img, face_info.at(i).location_, cv::Scalar(0, 255, 0), 2);
-			for (int num = 0; num < 5; ++num) {
-				cv::Point curr_pt = cv::Point(face_info.at(i).keypoints_[num],
-												face_info.at(i).keypoints_[num + 5]);
-				cv::circle(img, curr_pt, 2, cv::Scalar(255, 0, 255), 2);
-			}
+			// for (int num = 0; num < 5; ++num) {
+			// 	cv::Point curr_pt = cv::Point(face_info.at(i).keypoints_[num],
+			// 									face_info.at(i).keypoints_[num + 5]);
+			// 	cv::circle(img, curr_pt, 2, cv::Scalar(255, 0, 255), 2);
+			// }
 		}
 		image = img;
 	}
