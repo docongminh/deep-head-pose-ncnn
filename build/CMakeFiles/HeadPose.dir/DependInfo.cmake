@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/source/src/core/common.cpp" "/source/build/CMakeFiles/HeadPose.dir/src/core/common.cpp.o"
   "/source/src/core/headpose.cpp" "/source/build/CMakeFiles/HeadPose.dir/src/core/headpose.cpp.o"
   "/source/src/core/retinaface.cpp" "/source/build/CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.o"
+  "/source/src/engine.cpp" "/source/build/CMakeFiles/HeadPose.dir/src/engine.cpp.o"
   "/source/src/main.cpp" "/source/build/CMakeFiles/HeadPose.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -96,9 +96,22 @@ CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /source/src/core/retinaface.cpp -o CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.s
 
+CMakeFiles/HeadPose.dir/src/engine.cpp.o: CMakeFiles/HeadPose.dir/flags.make
+CMakeFiles/HeadPose.dir/src/engine.cpp.o: ../src/engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HeadPose.dir/src/engine.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadPose.dir/src/engine.cpp.o -c /source/src/engine.cpp
+
+CMakeFiles/HeadPose.dir/src/engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadPose.dir/src/engine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /source/src/engine.cpp > CMakeFiles/HeadPose.dir/src/engine.cpp.i
+
+CMakeFiles/HeadPose.dir/src/engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadPose.dir/src/engine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /source/src/engine.cpp -o CMakeFiles/HeadPose.dir/src/engine.cpp.s
+
 CMakeFiles/HeadPose.dir/src/main.cpp.o: CMakeFiles/HeadPose.dir/flags.make
 CMakeFiles/HeadPose.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HeadPose.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HeadPose.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadPose.dir/src/main.cpp.o -c /source/src/main.cpp
 
 CMakeFiles/HeadPose.dir/src/main.cpp.i: cmake_force
@@ -114,6 +127,7 @@ HeadPose_OBJECTS = \
 "CMakeFiles/HeadPose.dir/src/core/common.cpp.o" \
 "CMakeFiles/HeadPose.dir/src/core/headpose.cpp.o" \
 "CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.o" \
+"CMakeFiles/HeadPose.dir/src/engine.cpp.o" \
 "CMakeFiles/HeadPose.dir/src/main.cpp.o"
 
 # External object files for target HeadPose
@@ -122,10 +136,11 @@ HeadPose_EXTERNAL_OBJECTS =
 libHeadPose.a: CMakeFiles/HeadPose.dir/src/core/common.cpp.o
 libHeadPose.a: CMakeFiles/HeadPose.dir/src/core/headpose.cpp.o
 libHeadPose.a: CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.o
+libHeadPose.a: CMakeFiles/HeadPose.dir/src/engine.cpp.o
 libHeadPose.a: CMakeFiles/HeadPose.dir/src/main.cpp.o
 libHeadPose.a: CMakeFiles/HeadPose.dir/build.make
 libHeadPose.a: CMakeFiles/HeadPose.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libHeadPose.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libHeadPose.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/HeadPose.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HeadPose.dir/link.txt --verbose=$(VERBOSE)
 

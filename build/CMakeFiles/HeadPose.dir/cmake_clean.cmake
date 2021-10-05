@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/HeadPose.dir/src/core/common.cpp.o"
   "CMakeFiles/HeadPose.dir/src/core/headpose.cpp.o"
   "CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.o"
+  "CMakeFiles/HeadPose.dir/src/engine.cpp.o"
   "CMakeFiles/HeadPose.dir/src/main.cpp.o"
   "libHeadPose.a"
   "libHeadPose.pdb"
