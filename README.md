@@ -23,10 +23,10 @@ Simple implement inference deep head pose ncnn version with high performance and
  
   - Examples:
    
-     ![cr7](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/cr7_output.jpg)
+     ![cr7](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/cr7_headpose.jpg)
      
       
-     ![m10](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/m10_output.jpg)
+     ![m10](https://github.com/docongminh/ncnn-deep-head-pose/blob/master/images/m10_headpose.jpg)
      
 ## Notice
   - This project in progress. So, it have many issues and coding performance during develop process.
