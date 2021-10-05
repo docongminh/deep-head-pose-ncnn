@@ -1,5 +1,5 @@
 # ncnn-deep-head-pose
-Simple implement inference deep head pose ncnn version with high performance and optimized resource in inference. This project based on [deep-head-pose](https://github.com/natanielruiz/deep-head-pose) project by **Nataniel Ruiz**. And detail paper in [CVPR Workshop](https://arxiv.org/abs/1710.00925). I use [Retinaface](https://github.com/deepinsight/insightface/tree/master/detection/retinaface) for face detection step.
+Simple implement inference deep head pose ncnn version with high performance and optimized resource. This project based on [deep-head-pose](https://github.com/natanielruiz/deep-head-pose) project by **Nataniel Ruiz**. And detail paper in [CVPR Workshop](https://arxiv.org/abs/1710.00925). I use [Retinaface](https://github.com/deepinsight/insightface/tree/master/detection/retinaface) for face detection step.
 
 # Workflow
 ## Re-build ncnn for arbitrary platform.
