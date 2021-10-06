@@ -142,9 +142,9 @@ namespace core {
             in.substract_mean_normalize(mean, norm);
             ex.input("input.1", in);
             //
-            std::string yaw_layer_name = "511";
+            std::string yaw_layer_name = "509";
             std::string pitch_layer_name = "510";
-            std::string roll_layer_name = "509";
+            std::string roll_layer_name = "511";
 
             ncnn::Mat yaw_mat, pitch_mat, roll_mat;
             ex.extract(yaw_layer_name.c_str(), yaw_mat);
