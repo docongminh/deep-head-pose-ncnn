@@ -147,20 +147,20 @@ namespace core {
 
 		float pitch_n = pitch * M_PI / 180;
 		float yaw_n = -(yaw * M_PI / 180);
-		float roll_ = roll * M_PI / 180;
+		float roll_n = roll * M_PI / 180;
 
 		// X-Axis pointing to right. drawn in red
-		float x1 = size * (cos(yaw) * cos(roll)) + tdx;
-		float y1 = size * (cos(pitch) * sin(roll) + cos(roll) * sin(pitch) * sin(yaw)) + tdy;
+		float x1 = size * (cos(yaw_n) * cos(roll_n)) + tdx;
+		float y1 = size * (cos(pitch_n) * sin(roll_n) + cos(roll_n) * sin(pitch_n) * sin(yaw_n)) + tdy;
 
 		// Y-Axis | drawn in green
 		//        v
-		float x2 = size * (-cos(yaw) * sin(roll)) + tdx;
-		float y2 = size * (cos(pitch) * cos(roll) - sin(pitch) * sin(yaw) * sin(roll)) + tdy;
+		float x2 = size * (-cos(yaw_n) * sin(roll_n)) + tdx;
+		float y2 = size * (cos(pitch_n) * cos(roll_n) - sin(pitch_n) * sin(yaw_n) * sin(roll_n)) + tdy;
 
 		// Z-Axis (out of the screen) drawn in blue
-		float x3 = size * (sin(yaw)) + tdx;
-		float y3 = size * (-cos(yaw) * sin(pitch)) + tdy;
+		float x3 = size * (sin(yaw_n)) + tdx;
+		float y3 = size * (-cos(yaw_n) * sin(pitch_n)) + tdy;
 		//
 		cv::Point origin_point(tdx, tdy);
 		cv::Point red(static_cast<int>(x1), static_cast<int>(y1));
