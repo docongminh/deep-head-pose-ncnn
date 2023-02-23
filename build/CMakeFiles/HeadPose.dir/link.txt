@@ -1,2 +1,0 @@
-/usr/bin/ar qc libHeadPose.a  CMakeFiles/HeadPose.dir/src/core/common.cpp.o CMakeFiles/HeadPose.dir/src/core/headpose.cpp.o CMakeFiles/HeadPose.dir/src/core/retinaface.cpp.o CMakeFiles/HeadPose.dir/src/engine.cpp.o CMakeFiles/HeadPose.dir/src/main.cpp.o
-/usr/bin/ranlib libHeadPose.a
